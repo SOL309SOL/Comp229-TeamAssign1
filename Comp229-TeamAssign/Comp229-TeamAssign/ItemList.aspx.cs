@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Comp229_TeamAssign
 {
-    public partial class Contact : Page
+    public partial class ItemList : Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {

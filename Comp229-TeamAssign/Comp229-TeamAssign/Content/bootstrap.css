@@ -1479,10 +1479,10 @@ th {
 .table-striped > tbody > tr:nth-child(odd) > th {
   background-color: #f9f9f9;
 }
-
 .table-hover > tbody > tr:hover > td,
 .table-hover > tbody > tr:hover > th {
   background-color: #f5f5f5;
+  color:black;
 }
 
 table col[class*="col-"] {
@@ -6814,18 +6814,23 @@ td.visible-print {
 
 }
 .description {
-    padding: 40% 0 0 0;
+    padding: 0 0 0 0;
     font-family: Tekton Pro Cond;
     color: white;
-    font-size: 2em;
+    font-size: 1.5em;
+    margin-bottom:5%;
 }
 .menu{
-    margin-top:50%;
+    margin-top:70%;
 }
-.menu > img{
+.menu > a > img{
     margin:30px;
+
 }
-    .menu > img:hover{
-        background-color:grey;
-        rotation:170deg;
-    }
+.menu > a > img:hover{
+    background-color:grey;
+}
+
+.dataDiv{
+    margin:3%;
+}
