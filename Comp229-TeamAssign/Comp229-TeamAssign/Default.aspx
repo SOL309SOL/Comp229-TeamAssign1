@@ -20,7 +20,7 @@
             Isn't Wizard products expensive?<br />
             Don't you have enough money to afford them?<br />
             You can borrow anything here for free!<br />
-            Just sign up our page, and enjoy your shopping.<br />
+            Just sign up our page, and enjoy your shopping!<br />
             </div>
             <asp:Button ID="btnSignUp" cssClass="btn btn-outline-secondary" runat="server" Text="Sign Up!" />
         </div>
