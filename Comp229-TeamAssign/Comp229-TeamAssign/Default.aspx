@@ -6,7 +6,7 @@
             <div class="menu">
                <a href="ItemList.aspx"><img src="img/harry_hat.png" width="30%"/><br /></a>
                <a href="SignUp.aspx"><img src="img/harry_broom.png" width="30%"/><br /></a>
-               <a href="#"><img src="img/harry_pen.png" width="30%"/></a>
+               <a href="SignIn.aspx"><img src="img/harry_pen.png" width="30%"/></a>
 
             </div>
         </div>
