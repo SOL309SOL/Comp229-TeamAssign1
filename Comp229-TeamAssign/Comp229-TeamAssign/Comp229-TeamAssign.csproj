@@ -54,6 +54,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
     <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.DataVisualization" />
     <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
@@ -127,8 +128,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Admin.aspx" />
     <Content Include="img\harry_logo3.jpg" />
-    <Content Include="ItemList.aspx" />
+    <Content Include="ItemDetail.aspx" />
+    <Content Include="itemList_Books.aspx" />
+    <Content Include="itemList_Brooms.aspx" />
+    <Content Include="itemList_Hats.aspx" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Site.css" />
@@ -152,6 +157,7 @@
     <Content Include="img\harry_pot.png" />
     <Content Include="img\harry_snitch.png" />
     <Content Include="img\harry_thunder.png" />
+    <Content Include="ItemList_Specials.aspx" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -189,14 +195,42 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
-    <Compile Include="ItemList.aspx.cs">
-      <DependentUpon>ItemList.aspx</DependentUpon>
+    <Compile Include="Admin.aspx.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="ItemList.aspx.designer.cs">
-      <DependentUpon>ItemList.aspx</DependentUpon>
+    <Compile Include="Admin.aspx.designer.cs">
+      <DependentUpon>Admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ItemDetail.aspx.cs">
+      <DependentUpon>ItemDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemDetail.aspx.designer.cs">
+      <DependentUpon>ItemDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="itemList_Books.aspx.cs">
+      <DependentUpon>itemList_Books.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="itemList_Books.aspx.designer.cs">
+      <DependentUpon>itemList_Books.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="itemList_Brooms.aspx.cs">
+      <DependentUpon>itemList_Brooms.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="itemList_Brooms.aspx.designer.cs">
+      <DependentUpon>itemList_Brooms.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="itemList_Hats.aspx.cs">
+      <DependentUpon>itemList_Hats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="itemList_Hats.aspx.designer.cs">
+      <DependentUpon>itemList_Hats.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -207,6 +241,13 @@
     </Compile>
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="ItemList_Specials.aspx.cs">
+      <DependentUpon>ItemList_Specials.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemList_Specials.aspx.designer.cs">
+      <DependentUpon>ItemList_Specials.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SignIn.aspx.cs">

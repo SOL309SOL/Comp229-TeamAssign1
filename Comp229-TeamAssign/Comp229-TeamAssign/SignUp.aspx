@@ -1,20 +1,27 @@
 ﻿<%@ Page Title="Sign Up" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="SignUp.aspx.cs" Inherits="Comp229_TeamAssign.SignUp" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-   <h2><%: Title %>.</h2>
-    <table style="width: 100%;">
+    <div class="main" align="center">
+        <h2><%: Title %>.</h2><br/>
+        <div class="col-md-3">
+        </div>
+        <div class="col-md-6">
+
+            
+            <table style="width: 100%; margin-left: 20%;">
                 <tr>
-                    <td class="auto-style1">User Name</td>
-                    <td class="auto-style4">
-                        <asp:TextBox ID="txtName" runat="server"></asp:TextBox>
+                    <td class="auto-style1" style="width: 114px; height: 26px;">User Name</td>
+                    <td class="auto-style4" style="width: 289px; height: 26px;">
+                        <asp:TextBox ID="txtName" runat="server"  Width="200px"></asp:TextBox>
                     </td>
-                    <td>
+                    <td style="height: 26px">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" BackColor="#FF5050" ControlToValidate="txtName" ErrorMessage="User Name is required" ForeColor="White"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2">Email</td>
-                    <td class="auto-style5">
-                        <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
+                    <td class="auto-style2" style="width: 114px">Email</td>
+                    <td class="auto-style5" style="width: 289px">
+                        <asp:TextBox ID="txtEmail" runat="server"  Width="200px"></asp:TextBox>
                     </td>
                     <td class="auto-style3">
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" BackColor="#FF5050" ControlToValidate="txtEmail" ErrorMessage="Email is required" ForeColor="White"></asp:RequiredFieldValidator>
@@ -23,18 +30,18 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style1">Password</td>
-                    <td class="auto-style4">
-                        <asp:TextBox ID="txtPwd" runat="server" TextMode="Password"></asp:TextBox>
+                    <td class="auto-style1" style="width: 114px">Password</td>
+                    <td class="auto-style4" style="width: 289px">
+                        <asp:TextBox ID="txtPwd" runat="server" TextMode="Password"  Width="200px"></asp:TextBox>
                     </td>
                     <td>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" BackColor="#FF5050" ControlToValidate="txtPwd" ErrorMessage="Password is required" ForeColor="White"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style1">Confirm Password</td>
-                    <td class="auto-style4">
-                        <asp:TextBox ID="txtConfirmPwd" runat="server" TextMode="Password"></asp:TextBox>
+                    <td class="auto-style1" style="width: 114px">Confirm Password</td>
+                    <td class="auto-style4" style="width: 289px">
+                        <asp:TextBox ID="txtConfirmPwd" runat="server" TextMode="Password"  Width="200px"></asp:TextBox>
                     </td>
                     <td>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" BackColor="#FF5050" ControlToValidate="txtConfirmPwd" ErrorMessage="Confirm is required" ForeColor="White"></asp:RequiredFieldValidator>
@@ -43,9 +50,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style1">Country</td>
-                    <td class="auto-style4">
-                        <asp:DropDownList ID="ddlCountry" runat="server" Width="250px">
+                    <td class="auto-style1" style="width: 114px">Country</td>
+                    <td class="auto-style4" style="width: 289px">
+                        <asp:DropDownList ID="ddlCountry" runat="server" Width="200px">
                             <asp:ListItem>Select...</asp:ListItem>
                             <asp:ListItem>USA</asp:ListItem>
                             <asp:ListItem>CANADA</asp:ListItem>
@@ -58,11 +65,15 @@
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td>
+                    <td style="width: 114px"></td>
+                    <td style="width: 289px">
                         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Button" />
                         <input id="Reset1" type="reset" value="reset" /></td>
                     <td></td>
                 </tr>
-      </table>
+            </table>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
 </asp:Content>

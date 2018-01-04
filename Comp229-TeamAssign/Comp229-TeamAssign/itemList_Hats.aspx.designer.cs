@@ -10,24 +10,24 @@
 namespace Comp229_TeamAssign {
     
     
-    public partial class ItemList {
+    public partial class itemList_Hats {
         
         /// <summary>
-        /// GridView1 control.
+        /// itemListSource control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.GridView GridView1;
+        protected global::System.Web.UI.WebControls.SqlDataSource itemListSource;
         
         /// <summary>
-        /// HarryDataSource control.
+        /// CharacterList control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource HarryDataSource;
+        protected global::System.Web.UI.WebControls.Repeater CharacterList;
     }
 }

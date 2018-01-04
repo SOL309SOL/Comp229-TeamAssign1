@@ -11,12 +11,16 @@ namespace Comp229_TeamAssign
 {
     public partial class SignUp : System.Web.UI.Page
     {
+        /// <summary>
+        /// This is my page load.
+        /// </summary>
+        /// <param name="sender">Sending argument</param>
+        /// <param name="e">Argument</param>
         protected void Page_Load(object sender, EventArgs e)
         {
             if (IsPostBack)
             {
-
-
+                
                 SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Login"].ConnectionString);
                 conn.Open();
                 string checkuser = "select count(*) from users where UserName='" + txtName.Text + "'";
@@ -31,7 +35,11 @@ namespace Comp229_TeamAssign
 
             }
         }
-
+        /// <summary>
+        /// This is button for sign-up
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void Button1_Click(object sender, EventArgs e)
         {
             try
@@ -51,7 +59,7 @@ namespace Comp229_TeamAssign
                 com.Parameters.AddWithValue("@country", ddlCountry.SelectedItem.ToString());
 
                 com.ExecuteNonQuery();
-                //Response.Redirect("default.aspx");
+                Response.Redirect("ItemList.aspx");
                 Response.Write("Registration is succesful");
 
                 conn.Close();

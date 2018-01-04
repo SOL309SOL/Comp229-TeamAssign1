@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace Comp229_TeamAssign
 {
-    public partial class ItemList : Page
+    public partial class ItemList_Specials : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
