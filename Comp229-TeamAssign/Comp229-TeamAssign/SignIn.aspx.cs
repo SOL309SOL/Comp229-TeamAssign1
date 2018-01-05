@@ -40,7 +40,7 @@ namespace Comp229_TeamAssign
                 {
                     Session["User"] = txtLoginName.Text;
                     Response.Write("Password is correct");
-                    Response.Redirect("itemList.aspx");
+                    Response.Redirect("~/Account.aspx");
                 }
                 else
                 {

@@ -52,6 +52,17 @@ namespace Comp229_TeamAssign
             dr.Close();
             con.Close();
         }
+
+
+
+
+        
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            var item_id = Request.QueryString["item_id"];
+            Response.Redirect("Cart.aspx?item_id=" + item_id);
+        }
     }
 
 }

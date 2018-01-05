@@ -128,8 +128,38 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Account.aspx" />
     <Content Include="Admin.aspx" />
+    <Content Include="Cart.aspx" />
+    <Content Include="img\Book_BreakWithABanshee.png" />
+    <Content Include="img\Book_IntermediateTransfiguration.png" />
+    <Content Include="img\Book_magic_history.png" />
+    <Content Include="img\Book_of_Spells_1.png" />
+    <Content Include="img\Book_of_Spells_2.png" />
+    <Content Include="img\Book_SelfProtection.png" />
+    <Content Include="img\Book_transfiguration.png" />
+    <Content Include="img\Book_Unfogging.png" />
+    <Content Include="img\Broom_comet140.jpg" />
+    <Content Include="img\Broom_comet180.jpg" />
+    <Content Include="img\Broom_comet260.jpg" />
+    <Content Include="img\Broom_nimbus1000.jpg" />
+    <Content Include="img\Broom_nimbus1500.jpg" />
+    <Content Include="img\Broom_nimbus2000.jpg" />
+    <Content Include="img\Broom_nimbus2001.jpg" />
+    <Content Include="img\Broom_oakshaft79.jpg" />
     <Content Include="img\harry_logo3.jpg" />
+    <Content Include="img\Item_Bezoar.jpg" />
+    <Content Include="img\Item_FlooPowder.jpg" />
+    <Content Include="img\Item_FoeGlass.jpg" />
+    <Content Include="img\Item_InvisibilityCloak.jpg" />
+    <Content Include="img\Item_MaraudersMap.jpg" />
+    <Content Include="img\Item_MirrorOfErised.jpg" />
+    <Content Include="img\Item_Omnioculars.jpg" />
+    <Content Include="img\Item_Pensieve.jpg" />
+    <Content Include="img\Itme_Cauldron.jpg" />
+    <Content Include="img\polyjuice.jpg" />
+    <Content Include="img\shadow.png" />
+    <Content Include="img\shadow1.png" />
     <Content Include="ItemDetail.aspx" />
     <Content Include="itemList_Books.aspx" />
     <Content Include="itemList_Brooms.aspx" />
@@ -195,6 +225,13 @@
     <Content Include="Site.Mobile.Master" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Account.aspx.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account.aspx.designer.cs">
+      <DependentUpon>Account.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Admin.aspx.cs">
       <DependentUpon>Admin.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -204,6 +241,13 @@
     </Compile>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
     <Compile Include="ItemDetail.aspx.cs">
       <DependentUpon>ItemDetail.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

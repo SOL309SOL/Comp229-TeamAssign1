@@ -18,14 +18,15 @@
                         <p>Price: <%# Eval("item_price") %></p>
                         <p>Quantity: <%# Eval("item_quantity") %></p>
                     </div>
-                    <div class="characterBlock">
-                        Test
-                    </div>
+                    
                 </ItemTemplate>
                
 
             </asp:Repeater>
-            
+            <div class="characterBlock">
+                <asp:Button ID="Button2" runat="server" Text="Go to Cart" OnClick="Button2_Click" Width="100%" Height="180px" BorderStyle="None" BackColor="#999999" />
+
+            </div>
         </div>
         <div class="col-md-2">
             
