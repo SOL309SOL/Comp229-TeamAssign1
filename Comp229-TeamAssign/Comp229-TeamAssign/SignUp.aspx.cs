@@ -68,7 +68,7 @@ namespace Comp229_TeamAssign
                 Response.Write("Error:" + ex.ToString());
 
             }
-
+            Response.Redirect("Default.aspx");
 
 
         }
