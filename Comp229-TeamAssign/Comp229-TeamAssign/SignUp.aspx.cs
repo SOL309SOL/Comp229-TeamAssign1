@@ -21,9 +21,9 @@ namespace Comp229_TeamAssign
             if (IsPostBack)
             {
                 
-                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Login"].ConnectionString);
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["HarryPotter"].ConnectionString);
                 conn.Open();
-                string checkuser = "select count(*) from users where UserName='" + txtName.Text + "'";
+                string checkuser = "select count(*) from Customers where FirstName='" + txtFName.Text + "'";
                 SqlCommand com = new SqlCommand(checkuser, conn);
                 int temp = Convert.ToInt32(com.ExecuteScalar().ToString());
                 if (temp == 1)
@@ -47,21 +47,20 @@ namespace Comp229_TeamAssign
 
                 Guid newGUID = Guid.NewGuid();
 
-                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Login"].ConnectionString);
+                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["HarryPotter"].ConnectionString);
                 conn.Open();
-                string insertQuery = "insert into users (id, UserName, Email, Password, Country) values (@id, @Uname, @email, @password, @country)";
+                string insertQuery = "insert into Customers (Customer_id, FirstName, LastName, Address, School, Password) values (@id, @FName, @LName, @Address, @School, @Pwd)";
                 SqlCommand com = new SqlCommand(insertQuery, conn);
 
                 com.Parameters.AddWithValue("@id", newGUID.ToString());
-                com.Parameters.AddWithValue("@Uname", txtName.Text);
-                com.Parameters.AddWithValue("@email", txtEmail.Text);
-                com.Parameters.AddWithValue("@password", txtPwd.Text);
-                com.Parameters.AddWithValue("@country", ddlCountry.SelectedItem.ToString());
+                com.Parameters.AddWithValue("@FName", txtFName.Text);
+                com.Parameters.AddWithValue("@LName", txtLName.Text);
+                com.Parameters.AddWithValue("@Address", txtAddress.Text);
+                com.Parameters.AddWithValue("@Pwd", txtPwd.Text);
+                com.Parameters.AddWithValue("@School", ddlSchool.SelectedItem.ToString());
 
                 com.ExecuteNonQuery();
-                Response.Redirect("ItemList.aspx");
-                Response.Write("Registration is succesful");
-
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Registered Successfully')", true);
                 conn.Close();
             }
             catch (Exception ex)

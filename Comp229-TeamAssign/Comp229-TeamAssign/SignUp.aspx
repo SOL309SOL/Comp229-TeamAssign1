@@ -10,25 +10,34 @@
             
             <table style="width: 100%; margin-left: 20%;">
                 <tr>
-                    <td class="auto-style1" style="width: 114px; height: 26px;">User Name</td>
+                    <td class="auto-style1" style="width: 114px; height: 26px;">First Name</td>
                     <td class="auto-style4" style="width: 289px; height: 26px;">
-                        <asp:TextBox ID="txtName" runat="server"  Width="200px"></asp:TextBox>
+                        <asp:TextBox ID="txtFName" runat="server"  Width="200px"></asp:TextBox>
                     </td>
                     <td style="height: 26px">
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" BackColor="#FF5050" ControlToValidate="txtName" ErrorMessage="User Name is required" ForeColor="White"></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" BackColor="#FF5050" ControlToValidate="txtFName" ErrorMessage="First Name is required" ForeColor="White"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style2" style="width: 114px">Email</td>
-                    <td class="auto-style5" style="width: 289px">
-                        <asp:TextBox ID="txtEmail" runat="server"  Width="200px"></asp:TextBox>
+                    <td class="auto-style1" style="width: 114px; height: 26px;">Last Name</td>
+                    <td class="auto-style4" style="width: 289px; height: 26px;">
+                        <asp:TextBox ID="txtLName" runat="server"  Width="200px"></asp:TextBox>
                     </td>
-                    <td class="auto-style3">
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" BackColor="#FF5050" ControlToValidate="txtEmail" ErrorMessage="Email is required" ForeColor="White"></asp:RequiredFieldValidator>
-                        <br />
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" runat="server" BackColor="#FF9999" ErrorMessage="You have to write email address" ForeColor="White" ControlToValidate="txtEmail" ValidationExpression="\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*"></asp:RegularExpressionValidator>
+                    <td style="height: 26px">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator6" runat="server" BackColor="#FF5050" ControlToValidate="txtLName" ErrorMessage="Last Name is required" ForeColor="White"></asp:RequiredFieldValidator>
                     </td>
                 </tr>
+                <tr>
+                    <td class="auto-style2" style="width: 114px">Address</td>
+                    <td class="auto-style5" style="width: 289px">
+                        <asp:TextBox ID="txtAddress" runat="server"  Width="200px"></asp:TextBox>
+                    </td>
+                    <td class="auto-style3">
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" BackColor="#FF5050" ControlToValidate="txtAddress" ErrorMessage="Address is required" ForeColor="White"></asp:RequiredFieldValidator>
+
+                    </td>
+                </tr>
+
                 <tr>
                     <td class="auto-style1" style="width: 114px">Password</td>
                     <td class="auto-style4" style="width: 289px">
@@ -50,18 +59,18 @@
                     </td>
                 </tr>
                 <tr>
-                    <td class="auto-style1" style="width: 114px">Country</td>
+                    <td class="auto-style1" style="width: 114px">School</td>
                     <td class="auto-style4" style="width: 289px">
-                        <asp:DropDownList ID="ddlCountry" runat="server" Width="200px">
+                        <asp:DropDownList ID="ddlSchool" runat="server" Width="200px">
                             <asp:ListItem>Select...</asp:ListItem>
-                            <asp:ListItem>USA</asp:ListItem>
-                            <asp:ListItem>CANADA</asp:ListItem>
-                            <asp:ListItem>UK</asp:ListItem>
-                            <asp:ListItem>KOREA</asp:ListItem>
+                            <asp:ListItem>Gryffindor </asp:ListItem>
+                            <asp:ListItem>Slytherin</asp:ListItem>
+                            <asp:ListItem>Hufflepuff </asp:ListItem>
+                            <asp:ListItem>Ravenclaw</asp:ListItem>
                         </asp:DropDownList>
                     </td>
                     <td>
-                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" BackColor="#FF5050" ControlToValidate="ddlCountry" ErrorMessage="Select a country name" ForeColor="White" InitialValue="Select..."></asp:RequiredFieldValidator>
+                        <asp:RequiredFieldValidator ID="RequiredFieldValidator5" runat="server" BackColor="#FF5050" ControlToValidate="ddlSchool" ErrorMessage="Select Your School name" ForeColor="White" InitialValue="Select..."></asp:RequiredFieldValidator>
                     </td>
                 </tr>
                 <tr>

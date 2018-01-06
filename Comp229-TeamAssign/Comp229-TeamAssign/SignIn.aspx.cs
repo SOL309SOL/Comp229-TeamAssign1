@@ -13,6 +13,10 @@ namespace Comp229_TeamAssign
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if ( null != Session["FirstName"])
+            {
+                Response.Redirect("Account.aspx?FirstName="+Session["FirstName"]);
+            }
 
         }
         /// <summary>
@@ -24,23 +28,28 @@ namespace Comp229_TeamAssign
         {
 
 
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Login"].ConnectionString);
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["HarryPotter"].ConnectionString);
             conn.Open();
-            string checkuser = "select count(*) from users where UserName='" + txtLoginName.Text + "'";
+            string checkuser = "select count(*) from Customers where FirstName='" + txtLoginName.Text + "'";
             SqlCommand com = new SqlCommand(checkuser, conn);
             int temp = Convert.ToInt32(com.ExecuteScalar().ToString());
             conn.Close();
             if (temp == 1)
             {
                 conn.Open();
-                string checkPasswordQuery = "select password from users where UserName = '" + txtLoginName.Text + "'";
+                string checkPasswordQuery = "select Password from Customers where FirstName = '" + txtLoginName.Text + "'";
                 SqlCommand passComm = new SqlCommand(checkPasswordQuery, conn);
                 string password = passComm.ExecuteScalar().ToString().Replace(" ", "");
                 if (password == txtLoginPwd.Text)
                 {
-                    Session["User"] = txtLoginName.Text;
+                    Session["FirstName"] = txtLoginName.Text;
+
                     Response.Write("Password is correct");
-                    Response.Redirect("~/Account.aspx");
+
+                    //var customer_id = Request.QueryString["Customer_id"];
+                    Response.Redirect("Account.aspx?FirstName=" + Session["FirstName"]);
+                    
+
                 }
                 else
                 {
@@ -50,9 +59,11 @@ namespace Comp229_TeamAssign
             }
             else
             {
-                Response.Write("Username is not correct");
+                Response.Write("First Name is not correct");
             }
             conn.Close();
+
+
 
         }
     }

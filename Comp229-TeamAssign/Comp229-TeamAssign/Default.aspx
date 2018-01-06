@@ -1,6 +1,7 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Comp229_TeamAssign._Default" %>
 
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
+    <h4 style="border: 1px solid white; border-radius: 10px; margin-right: 5%; padding: 10px; float: right; font-family: Tekton Pro Cond;"><asp:Label ID="Label1" runat="server" Text=""></asp:Label></h4>
     <div class="main" align="center">
         <div class="col-md-2">
             <div class="menu">

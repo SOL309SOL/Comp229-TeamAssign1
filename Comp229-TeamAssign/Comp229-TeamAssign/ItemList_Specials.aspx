@@ -4,12 +4,13 @@
     <script>
        
         function myFunction() {
-            var r = confirm("Is it okay to charge $100,000,000,000,000?");
-            if (r == true) {
-                return alert("Wow! You are so rich! Marry me!");
-            } else {
-                return alert("I knew it haha");
-            }
+            var spell = alert("Shout Alohomora spell out loudly toward monitor! Then, it'll be opened!");
+            var spell1 = alert("I can't here you!");
+            var spell2 = alert("More loudly!!");
+            var spell3 = alert("Is it your best??");
+            var spell4 = alert("Really????");
+            var spell5 = alert("REALLY REALLY????");
+            var spell6 = alert("LOL");
         }
     </script>
 

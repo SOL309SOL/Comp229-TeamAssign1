@@ -20,14 +20,14 @@ namespace Comp229_TeamAssign
                 DataTable dt = new DataTable();
                 DataRow dr;
                 dt.Columns.Add("sno");
-                dt.Columns.Add("item_id");
-                dt.Columns.Add("item_name");
-                dt.Columns.Add("item_price");
-                dt.Columns.Add("item_quantity");
-                dt.Columns.Add("item_imgUrl");
+                dt.Columns.Add("Item_Specials_id");
+                dt.Columns.Add("Name");
+                dt.Columns.Add("Price");
+                dt.Columns.Add("Quantity");
+                dt.Columns.Add("ImgUrl");
                 dt.Columns.Add("totalcost");
 
-                if (Request.QueryString["item_id"] != null)
+                if (Request.QueryString["Item_Specials_id"] != null)
                 {
                     if (Session["Buyitems"] == null)
                     {
@@ -35,9 +35,9 @@ namespace Comp229_TeamAssign
                         dr = dt.NewRow();
 
                         SqlConnection con = new SqlConnection();
-                        con.ConnectionString = ConfigurationManager.ConnectionStrings["Login"].ConnectionString;
+                        con.ConnectionString = ConfigurationManager.ConnectionStrings["HarryPotter"].ConnectionString;
                         con.Open();
-                        String myquery = "select * from items1 where item_id=" + Request.QueryString["item_id"];
+                        String myquery = "select * from Items_Specials where Item_Specials_id=" + Request.QueryString["Item_Specials_id"];
                         SqlCommand cmd = new SqlCommand();
                         cmd.CommandText = myquery;
                         cmd.Connection = con;
@@ -46,11 +46,12 @@ namespace Comp229_TeamAssign
                         DataSet ds = new DataSet();
                         da.Fill(ds);
                         dr["sno"] = 1;
-                        dr["item_id"] = ds.Tables[0].Rows[0]["item_id"].ToString();
-                        dr["item_name"] = ds.Tables[0].Rows[0]["item_name"].ToString();
-                        dr["item_price"] = ds.Tables[0].Rows[0]["item_price"].ToString();
-                        dr["item_quantity"] = ds.Tables[0].Rows[0]["item_quantity"].ToString();
-                        dr["item_imgUrl"] = ds.Tables[0].Rows[0]["item_imgUrl"].ToString();
+                        dr["Item_Specials_id"] = ds.Tables[0].Rows[0]["Item_Specials_id"].ToString();
+                        dr["Name"] = ds.Tables[0].Rows[0]["Name"].ToString();
+                        dr["Price"] = ds.Tables[0].Rows[0]["Price"].ToString();
+                        dr["Quantity"] = ds.Tables[0].Rows[0]["Quantity"].ToString();
+
+                        dr["ImgUrl"] = ds.Tables[0].Rows[0]["ImgUrl"].ToString();
                         dt.Rows.Add(dr);
                         GridView1.DataSource = dt;
                         GridView1.DataBind();
@@ -65,9 +66,9 @@ namespace Comp229_TeamAssign
 
                         dr = dt.NewRow();
                         SqlConnection con = new SqlConnection();
-                        con.ConnectionString = ConfigurationManager.ConnectionStrings["Login"].ConnectionString;
+                        con.ConnectionString = ConfigurationManager.ConnectionStrings["HarryPotter"].ConnectionString;
                         con.Open();
-                        String myquery = "select * from items1 where item_id=" + Request.QueryString["item_id"];
+                        String myquery = "select * from Items_Specials where Item_Specials_id=" + Request.QueryString["Item_Specials_id"];
                         SqlCommand cmd = new SqlCommand();
                         cmd.CommandText = myquery;
                         cmd.Connection = con;
@@ -76,11 +77,12 @@ namespace Comp229_TeamAssign
                         DataSet ds = new DataSet();
                         da.Fill(ds);
                         dr["sno"] = sr + 1;
-                        dr["item_id"] = ds.Tables[0].Rows[0]["item_id"].ToString();
-                        dr["item_name"] = ds.Tables[0].Rows[0]["item_name"].ToString();
-                        dr["item_price"] = ds.Tables[0].Rows[0]["item_price"].ToString();
-                        dr["item_quantity"] = ds.Tables[0].Rows[0]["item_quantity"].ToString();
-                        dr["item_imgUrl"] = ds.Tables[0].Rows[0]["item_imgUrl"].ToString();
+                        dr["Item_Specials_id"] = ds.Tables[0].Rows[0]["Item_Specials_id"].ToString();
+                        dr["Name"] = ds.Tables[0].Rows[0]["Name"].ToString();
+                        dr["Price"] = ds.Tables[0].Rows[0]["Price"].ToString();
+                        dr["Quantity"] = ds.Tables[0].Rows[0]["Quantity"].ToString();
+
+                        dr["ImgUrl"] = ds.Tables[0].Rows[0]["ImgUrl"].ToString();
                         dt.Rows.Add(dr);
                         GridView1.DataSource = dt;
                         GridView1.DataBind();
@@ -102,7 +104,11 @@ namespace Comp229_TeamAssign
 
         protected void CartSubmit_OnClick(object sender, EventArgs e)
         {
-
+            ScriptManager.RegisterStartupScript(this, this.GetType(),
+                "alert",
+                "alert('Booked Successfully! Come to Platform 9 3/4 of Kings Cross in London and pick them up. Thank you. Have a good day! :9 '); window.location ='default.aspx';",
+                true);
+            return;
         }
     }
 }

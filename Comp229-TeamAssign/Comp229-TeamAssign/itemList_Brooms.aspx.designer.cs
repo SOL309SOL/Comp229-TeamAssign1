@@ -13,15 +13,6 @@ namespace Comp229_TeamAssign {
     public partial class itemList_Brooms {
         
         /// <summary>
-        /// itemListSource control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource itemListSource;
-        
-        /// <summary>
         /// CharacterList control.
         /// </summary>
         /// <remarks>
@@ -29,5 +20,14 @@ namespace Comp229_TeamAssign {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Repeater CharacterList;
+        
+        /// <summary>
+        /// SqlDataSource_Brooms control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource_Brooms;
     }
 }

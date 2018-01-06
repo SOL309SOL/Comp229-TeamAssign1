@@ -133,12 +133,16 @@
     <Content Include="Cart.aspx" />
     <Content Include="img\Book_BreakWithABanshee.png" />
     <Content Include="img\Book_IntermediateTransfiguration.png" />
+    <Content Include="img\Book_IntermediateTransfiguration_1.png" />
     <Content Include="img\Book_magic_history.png" />
+    <Content Include="img\Book_of_Spells.png" />
     <Content Include="img\Book_of_Spells_1.png" />
     <Content Include="img\Book_of_Spells_2.png" />
     <Content Include="img\Book_SelfProtection.png" />
+    <Content Include="img\Book_SelfProtection_1.png" />
     <Content Include="img\Book_transfiguration.png" />
     <Content Include="img\Book_Unfogging.png" />
+    <Content Include="img\Book_Unfogging_1.png" />
     <Content Include="img\Broom_comet140.jpg" />
     <Content Include="img\Broom_comet180.jpg" />
     <Content Include="img\Broom_comet260.jpg" />
@@ -161,6 +165,7 @@
     <Content Include="img\shadow.png" />
     <Content Include="img\shadow1.png" />
     <Content Include="ItemDetail.aspx" />
+    <Content Include="ItemDetail_Books.aspx" />
     <Content Include="itemList_Books.aspx" />
     <Content Include="itemList_Brooms.aspx" />
     <Content Include="itemList_Hats.aspx" />
@@ -254,6 +259,13 @@
     </Compile>
     <Compile Include="ItemDetail.aspx.designer.cs">
       <DependentUpon>ItemDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemDetail_Books.aspx.cs">
+      <DependentUpon>ItemDetail_Books.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemDetail_Books.aspx.designer.cs">
+      <DependentUpon>ItemDetail_Books.aspx</DependentUpon>
     </Compile>
     <Compile Include="itemList_Books.aspx.cs">
       <DependentUpon>itemList_Books.aspx</DependentUpon>

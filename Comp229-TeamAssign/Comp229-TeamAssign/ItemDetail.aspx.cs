@@ -14,11 +14,13 @@ namespace Comp229_TeamAssign
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            var item_id = Request.QueryString["item_id"];
-            if (string.IsNullOrEmpty(item_id))
+            var item_id = Request.QueryString["Item_Specials_id"];
+            if (string.IsNullOrEmpty(item_id) || null == Session["FirstName"])
             {
-                Response.Redirect("~/Default.aspx");
+                ScriptManager.RegisterStartupScript(this, this.GetType(),
+                    "alert",
+                    "alert('Login Please :) ');window.location ='default.aspx';",
+                    true);
                 return;
             }
             DisplayData();
@@ -27,12 +29,12 @@ namespace Comp229_TeamAssign
         private void DisplayData()
         {
             SqlConnection con = new SqlConnection();
-            con.ConnectionString = ConfigurationManager.ConnectionStrings["Login"].ConnectionString;
+            con.ConnectionString = ConfigurationManager.ConnectionStrings["HarryPotter"].ConnectionString;
             con.Open();
 
-            var item_id = Request.QueryString["item_id"];
+            var item_id = Request.QueryString["Item_Specials_id"];
 
-            String strSql = "SELECT * FROM items1 Where item_id = " + item_id;
+            String strSql = "SELECT * FROM Items_Specials Where Item_Specials_id = " + item_id;
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
@@ -60,8 +62,8 @@ namespace Comp229_TeamAssign
 
         protected void Button2_Click(object sender, EventArgs e)
         {
-            var item_id = Request.QueryString["item_id"];
-            Response.Redirect("Cart.aspx?item_id=" + item_id);
+            var item_id = Request.QueryString["Item_Specials_id"];
+            Response.Redirect("Cart.aspx?Item_Specials_id=" + item_id);
         }
     }
 

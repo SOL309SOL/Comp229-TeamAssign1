@@ -10,13 +10,21 @@ using System.Web.UI.WebControls;
 
 namespace Comp229_TeamAssign
 {
-    public partial class Account : System.Web.UI.Page
+    public partial class ItemDetail_Books : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
 
-            
-            //DisplayData();
+            var item_id = Request.QueryString["Item_Books_id"];
+            if (string.IsNullOrEmpty(item_id) || null == Session["FirstName"])
+            {
+                ScriptManager.RegisterStartupScript(this, this.GetType(),
+                    "alert",
+                    "alert('Login Please :) ');window.location ='default.aspx';",
+                    true);
+                return;
+            }
+            DisplayData();
 
         }
         private void DisplayData()
@@ -25,9 +33,9 @@ namespace Comp229_TeamAssign
             con.ConnectionString = ConfigurationManager.ConnectionStrings["HarryPotter"].ConnectionString;
             con.Open();
 
-            var firstName = Request.QueryString["FirstName"];
+            var item_id = Request.QueryString["Item_Books_id"];
 
-            String strSql = "SELECT * FROM Customers Where FirstName = " + firstName;
+            String strSql = "SELECT * FROM Items_Books Where Item_Books_id = " + item_id;
 
             SqlCommand cmd = new SqlCommand();
             cmd.Connection = con;
@@ -49,5 +57,14 @@ namespace Comp229_TeamAssign
         }
 
 
+
+
+
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            var item_id = Request.QueryString["Item_Specials_id"];
+            Response.Redirect("Cart.aspx?Item_Specials_id=" + item_id);
+        }
     }
 }

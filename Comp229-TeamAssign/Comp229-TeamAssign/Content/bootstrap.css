@@ -6913,3 +6913,6 @@ td.visible-print {
     display: block;
     margin-top: -20px;
 }
+.display {
+    display: block;
+}

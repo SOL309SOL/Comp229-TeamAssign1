@@ -11,7 +11,11 @@ namespace Comp229_TeamAssign
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            if (null != Session["FirstName"])
+            {
+                Label1.Text = "Welcome! " + Session["FirstName"] + ".<br> Enjoy Magical Library :)";
 
+            }
         }
         protected void Button1_Click(object sender, EventArgs e)
         {

@@ -35,17 +35,16 @@
 
       
 
-        <asp:SqlDataSource ID="itemListSource" runat="server" ConnectionString="<%$ ConnectionStrings:Login %>" SelectCommand="SELECT * FROM [items1]"></asp:SqlDataSource>
         <div class="itemList">
-            <asp:Repeater ID="CharacterList" runat="server" DataSourceID="itemListSource">
+            <asp:Repeater ID="CharacterList" runat="server" DataSourceID="SqlDataSource_Books">
                 <HeaderTemplate>
                 </HeaderTemplate>
                 <ItemTemplate>
-                    <a href='<%# Eval("item_id", "ItemDetail.aspx?item_id={0}") %>'>
+                    <a href='<%# Eval("Item_Books_id", "ItemDetail_Books.aspx?Item_Books_id={0}") %>'>
                         <div class="characterBlock">
                             <div class="innerHover">
-                                <%# Eval("item_name") %>
-                                <asp:Image ID="itemImg" runat="server" Width="40%" ImageUrl='<%# Eval("item_imgUrl") %>' />
+                                <%# Eval("Name") %>
+                                <asp:Image ID="itemImg" runat="server" Width="40%" ImageUrl='<%# Eval("ImgUrl") %>' />
                                 <br />
                             </div>
                         </div>
@@ -54,6 +53,7 @@
                 <FooterTemplate>
                 </FooterTemplate>
             </asp:Repeater>
+            <asp:SqlDataSource ID="SqlDataSource_Books" runat="server" ConnectionString="<%$ ConnectionStrings:HarryPotter %>" SelectCommand="SELECT * FROM [Items_Books]"></asp:SqlDataSource>
         </div>
 
     
