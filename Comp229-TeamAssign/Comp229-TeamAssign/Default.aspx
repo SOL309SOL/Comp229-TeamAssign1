@@ -1,5 +1,12 @@
 ﻿<%@ Page Title="Home Page" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="Comp229_TeamAssign._Default" %>
 
+<%--Welcome to Mika and Yesol's magical rental shop!
+    Sorry for not to write comment.. T-T
+Please run sql under the sql folder first.
+And Register id with your first name and login please :)
+Thank you.--%>
+
+
 <asp:Content ID="BodyContent" ContentPlaceHolderID="MainContent" runat="server">
     <h4 style="border: 1px solid white; border-radius: 10px; margin-right: 5%; padding: 10px; float: right; font-family: Tekton Pro Cond;"><asp:Label ID="Label1" runat="server" Text=""></asp:Label></h4>
     <div class="main" align="center">
