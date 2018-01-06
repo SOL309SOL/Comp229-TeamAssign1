@@ -13,24 +13,31 @@ namespace Comp229_TeamAssign
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //if (Session["FirstName"].ToString() == "Admin")
+            //{
+            //    ScriptManager.RegisterStartupScript(this, this.GetType(),
+            //        "alert",
+            //        "alert('Only Admin can access this page :) ');window.location ='default.aspx';",
+            //        true);
+            //    return;
+            //}
         }
         protected void btnAddItems_Click(object sender, EventArgs e)
         {
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["Login"].ConnectionString);
+            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["HarryPotter"].ConnectionString);
             conn.Open();
-            string insertQuery = "insert into items (item_name, item_price, item_quantity) values (@Iname, @IPrice, @IQty)";
+            string insertQuery = "insert into Items_Specials (Name, Price, Quantity) values (@Name, @Price, @Quantity)";
             SqlCommand com = new SqlCommand(insertQuery, conn);
 
-            com.Parameters.AddWithValue("@Iname", txtAddItemName.Text);
-            com.Parameters.AddWithValue("@IPrice", txtAddItemPrice.Text);
-            com.Parameters.AddWithValue("@IQty", txtAddItemQuantity.Text);
-
+            com.Parameters.AddWithValue("@Name", txtAddItemName.Text);
+            com.Parameters.AddWithValue("@Price", txtAddItemPrice.Text);
+            com.Parameters.AddWithValue("@Quantity", txtAddItemQuantity.Text);
+          
             com.ExecuteNonQuery();
             Response.Redirect("~/Admin.aspx");
 
-            CharacterList.DataSource = conn;
-            CharacterList.DataBind();
+            GridView2.DataSource = conn;
+            GridView2.DataBind();
 
             conn.Close();
         }

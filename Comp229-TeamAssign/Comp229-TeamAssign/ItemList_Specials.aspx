@@ -4,7 +4,7 @@
     <script>
        
         function myFunction() {
-            var spell = alert("Shout Alohomora spell out loudly toward monitor! Then, it'll be opened!");
+            var spell = alert("Shout a spell Alohomora toward monitor! Then, the door will be opened to give items!");
             var spell1 = alert("I can't here you!");
             var spell2 = alert("More loudly!!");
             var spell3 = alert("Is it your best??");

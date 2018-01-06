@@ -31,22 +31,22 @@ namespace Comp229_TeamAssign {
         protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource_Users;
         
         /// <summary>
-        /// CharacterList control.
+        /// GridView2 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater CharacterList;
+        protected global::System.Web.UI.WebControls.GridView GridView2;
         
         /// <summary>
-        /// SqlDataSource_items control.
+        /// SqlDataSource_Items control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource_items;
+        protected global::System.Web.UI.WebControls.SqlDataSource SqlDataSource_Items;
         
         /// <summary>
         /// lblAddItemName control.

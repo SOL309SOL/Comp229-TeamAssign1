@@ -165,7 +165,6 @@
     <Content Include="img\shadow.png" />
     <Content Include="img\shadow1.png" />
     <Content Include="ItemDetail.aspx" />
-    <Content Include="ItemDetail_Books.aspx" />
     <Content Include="itemList_Books.aspx" />
     <Content Include="itemList_Brooms.aspx" />
     <Content Include="itemList_Hats.aspx" />
@@ -259,13 +258,6 @@
     </Compile>
     <Compile Include="ItemDetail.aspx.designer.cs">
       <DependentUpon>ItemDetail.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ItemDetail_Books.aspx.cs">
-      <DependentUpon>ItemDetail_Books.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ItemDetail_Books.aspx.designer.cs">
-      <DependentUpon>ItemDetail_Books.aspx</DependentUpon>
     </Compile>
     <Compile Include="itemList_Books.aspx.cs">
       <DependentUpon>itemList_Books.aspx</DependentUpon>
