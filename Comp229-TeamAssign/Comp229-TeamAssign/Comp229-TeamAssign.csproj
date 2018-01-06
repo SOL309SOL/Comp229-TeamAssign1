@@ -181,6 +181,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Comp229-TeamProject.docx" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="img\harry_broom.png" />
     <Content Include="img\harry_hat.png" />
@@ -223,6 +224,7 @@
     <Content Include="SignIn.aspx" />
     <Content Include="SignUp.aspx" />
     <Content Include="Site.Master" />
+    <Content Include="sql\SQLQuery_HarryPotter.sql" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />

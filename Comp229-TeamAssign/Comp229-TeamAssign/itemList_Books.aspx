@@ -27,8 +27,8 @@
     </style>
 
     <div class="itemListMain" align="center">
-        <h1 style="font-family: Tekton Pro Cond;">Hats</h1>
-        <img src="img/harry_hat.png" width="13%"/><br />
+        <h1 style="font-family: Tekton Pro Cond;">Books</h1>
+        <img src="img/harry_pen.png" width="13%"/><br />
 
 
       
