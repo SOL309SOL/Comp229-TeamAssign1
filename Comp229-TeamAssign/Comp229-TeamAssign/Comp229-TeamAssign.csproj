@@ -128,6 +128,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cart.aspx" />
     <Content Include="img\Book_BreakWithABanshee.png" />
     <Content Include="img\Book_IntermediateTransfiguration.png" />
     <Content Include="img\Book_IntermediateTransfiguration_1.png" />
@@ -161,6 +162,7 @@
     <Content Include="img\polyjuice.jpg" />
     <Content Include="img\shadow.png" />
     <Content Include="img\shadow1.png" />
+    <Content Include="ItemDetail.aspx" />
     <Content Include="itemList_Books.aspx" />
     <Content Include="itemList_Brooms.aspx" />
     <Content Include="itemList_Hats.aspx" />
@@ -227,6 +229,20 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Cart.aspx.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cart.aspx.designer.cs">
+      <DependentUpon>Cart.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ItemDetail.aspx.cs">
+      <DependentUpon>ItemDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ItemDetail.aspx.designer.cs">
+      <DependentUpon>ItemDetail.aspx</DependentUpon>
+    </Compile>
     <Compile Include="itemList_Books.aspx.cs">
       <DependentUpon>itemList_Books.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
